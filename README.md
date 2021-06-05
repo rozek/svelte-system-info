@@ -27,4 +27,4 @@ npm install svelte-system-info
 
 An example is available on the Svelte REPL - feel free to play with it!
 
-* [svelte-system-info]()
+* [svelte-system-info](https://svelte.dev/repl/31898be7c9cc4512b3613290de2e6d39)
