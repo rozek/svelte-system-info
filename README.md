@@ -1,6 +1,6 @@
 # svelte-system-info #
 
- determines name and version of underlying browser and operating system
+ determines name and version of underlying browser and operating system (not only for Svelte)
 
 **NPM users**: please consider the [Github README](https://github.com/rozek/svelte-system-info/blob/main/README.md) for the latest description of this package (as updating the docs would otherwise always require a new NPM package version)
 
