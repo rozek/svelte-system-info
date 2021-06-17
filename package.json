@@ -17,11 +17,8 @@
     "url": "git+https://github.com/rozek/svelte-system-info.git"
   },
   "keywords": [
-    "browser",
-    "operating",
-    "system",
-    "name",
-    "version"
+    "browser-detection",
+    "os-detection"
   ],
   "author": "Andreas Rozek <a.rozek@gmx.de> (https://www.rozek.de/)",
   "license": "MIT",
