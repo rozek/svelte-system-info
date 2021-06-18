@@ -28,3 +28,14 @@ npm install svelte-system-info
 An example is available on the Svelte REPL - feel free to play with it!
 
 * [svelte-system-info](https://svelte.dev/repl/31898be7c9cc4512b3613290de2e6d39)
+
+### Build Instructions ###
+
+You may easily build this package yourself.
+
+Just install [NPM](https://docs.npmjs.com/) according to the instructions for your platform and follow these steps:
+
+1. either clone this repository using [git](https://git-scm.com/) or [download a ZIP archive](https://github.com/rozek/svelte-system-info/archive/refs/heads/main.zip) with its contents to your disk and unpack it there 
+2. open a shell and navigate to the root directory of this repository
+3. run `npm install` in order to install the complete build environment
+4. execute `npm run build` to create a new build
