@@ -48,12 +48,10 @@ Alternatively, you may access the global Variable `System` directly.
 Let's assume that you already "required" or "imported" (or simply loaded) the module according to your local environment. In that case, you may use it as follows:
 
 ```
-<script>
-  console.log('BrowserName',    System.BrowserName)
-  console.log('BrowserVersion', System.BrowserVersion)
-  console.log('OSName',         System.OSName)
-  console.log('OSVersion',      System.OSVersion)
-</script>
+console.log('BrowserName',    System.BrowserName)
+console.log('BrowserVersion', System.BrowserVersion)
+console.log('OSName',         System.OSName)
+console.log('OSVersion',      System.OSVersion)
 ```
 
 ### Example ###
