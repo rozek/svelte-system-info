@@ -6,11 +6,31 @@
 
 ### Installation ###
 
+`svelte-system-info` may be used as an ESM, CommonJS or AMD module or from a global variable.
+
+You may either install the package into your build environment using [NPM](https://docs.npmjs.com/) with the command
+
 ```
 npm install svelte-system-info
 ```
 
-### Usage ###
+or load the plain script file directly
+
+```
+<script src="https://unpkg.com/svelte-system-info"></script>
+```
+
+### Access ###
+
+How to access the package depends on the type of module you prefer
+
+* ESM: `import System from 'svelte-system-info'`
+* CommonJS: `const System = require('svelte-system-info')`
+* AMD: `require(['svelte-system-info'], (System) => {...})`
+
+Alternatively, you may access the global Variable `System` directly.
+
+### Usage as an ECMAscript Module (e.g., within Svelte) ###
 
 ```
 <script>
@@ -21,6 +41,17 @@ npm install svelte-system-info
   console.log('OSName',         System.OSName)
   console.log('OSVersion',      System.OSVersion)
 </script>
+```
+
+### Usage as a CommonJS or AMD Module (or as a global Variable) ###
+
+Let's assume that you already "required" or "imported" (or simply loaded) the module according to your local environment. In that case, you may use it as follows:
+
+```
+console.log('BrowserName',    System.BrowserName)
+console.log('BrowserVersion', System.BrowserVersion)
+console.log('OSName',         System.OSName)
+console.log('OSVersion',      System.OSVersion)
 ```
 
 ### Example ###
