@@ -4,7 +4,7 @@
 
 **NPM users**: please consider the [Github README](https://github.com/rozek/svelte-system-info/blob/main/README.md) for the latest description of this package (as updating the docs would otherwise always require a new NPM package version)
 
-### Installation ###
+## Installation ##
 
 `svelte-system-info` may be used as an ESM, CommonJS or AMD module or from a global variable.
 
@@ -20,7 +20,7 @@ or load the plain script file directly
 <script src="https://unpkg.com/svelte-system-info"></script>
 ```
 
-### Access ###
+## Access ##
 
 How to access the package depends on the type of module you prefer
 
@@ -30,7 +30,7 @@ How to access the package depends on the type of module you prefer
 
 Alternatively, you may access the global Variable `System` directly.
 
-### Usage as an ECMAscript Module (e.g., within Svelte) ###
+## Usage as an ECMAscript Module (e.g., within Svelte) ##
 
 ```
 <script>
@@ -43,7 +43,7 @@ Alternatively, you may access the global Variable `System` directly.
 </script>
 ```
 
-### Usage as a CommonJS or AMD Module (or as a global Variable) ###
+## Usage as a CommonJS or AMD Module (or as a global Variable) ##
 
 Let's assume that you already "required" or "imported" (or simply loaded) the module according to your local environment. In that case, you may use it as follows:
 
@@ -54,13 +54,13 @@ console.log('OSName',         System.OSName)
 console.log('OSVersion',      System.OSVersion)
 ```
 
-### Example ###
+## Example ##
 
 An example is available on the Svelte REPL - feel free to play with it!
 
 * [svelte-system-info](https://svelte.dev/repl/31898be7c9cc4512b3613290de2e6d39)
 
-### Build Instructions ###
+## Build Instructions ##
 
 You may easily build this package yourself.
 
@@ -70,3 +70,7 @@ Just install [NPM](https://docs.npmjs.com/) according to the instructions for yo
 2. open a shell and navigate to the root directory of this repository
 3. run `npm install` in order to install the complete build environment
 4. execute `npm run build` to create a new build
+
+## License ##
+
+[MIT License](LICENSE.md)
