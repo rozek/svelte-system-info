@@ -1,3 +1,7 @@
+//----------------------------------------------------------------------------//
+//                             Svelte System Info                             //
+//----------------------------------------------------------------------------//
+
   const UserAgent = {
     Value:    window.navigator.userAgent,
     contains: function contains (ValueToSearchFor:string):boolean {
