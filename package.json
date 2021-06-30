@@ -1,6 +1,6 @@
 {
   "name": "svelte-system-info",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "determines name and version of underlying browser and operating system",
   "main": "./dist/svelte-system-info.js",
   "module": "./dist/svelte-system-info.esm.js",
