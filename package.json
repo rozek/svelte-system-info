@@ -4,6 +4,7 @@
   "description": "determines name and version of underlying browser and operating system",
   "main": "./dist/svelte-system-info.js",
   "module": "./dist/svelte-system-info.esm.js",
+  "svelte": "./dist/svelte-system-info.esm.js",
   "exports": {
     "require": "./dist/svelte-system-info.js",
     "import": "./dist/svelte-system-info.esm.js"
