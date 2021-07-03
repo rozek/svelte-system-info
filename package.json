@@ -4,14 +4,14 @@
   "description": "determines name and version of underlying browser and operating system",
   "main": "./dist/svelte-system-info.js",
   "module": "./dist/svelte-system-info.esm.js",
-  "svelte": "./dist/svelte-system-info.esm.js",
+  "svelte": "./dist/svelte-system-info.svelte.js",
   "exports": {
     "require": "./dist/svelte-system-info.js",
     "import": "./dist/svelte-system-info.esm.js"
   },
   "types": "./dist/svelte-system-info.d.ts",
   "scripts": {
-    "build": "rimraf dist && tsc && rollup -c rollup.config.js && mv src/*.d.ts dist && rm src/*.js",
+    "build": "rimraf dist && tsc && rollup -c rollup.config.js && mv src/*.d.ts dist && mv src/*.js ./dist/svelte-system-info.svelte.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
