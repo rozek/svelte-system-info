@@ -47,7 +47,7 @@ For Svelte, it is recommended to import the package in a module context:
 </script>
 ```
 
-## Usage as an ECMAscript, a CommonJS or AMD Module (or as a global Variable) ##
+## Usage as ECMAscript, CommonJS or AMD Module (or as a global Variable) ##
 
 Let's assume that you already "required" or "imported" (or simply loaded) the module according to your local environment. In that case, you may use it as follows:
 
