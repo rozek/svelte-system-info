@@ -30,12 +30,16 @@ How to access the package depends on the type of module you prefer
 
 Alternatively, you may access the global variable `System` directly.
 
-## Usage as an ECMAscript Module (e.g., within Svelte) ##
+## Usage within Svelte ##
+
+For Svelte, it is recommended to import the package in a module context:
 
 ```
-<script>
-  import System from 'svelte-system-info'
+<script context="module">
+  import Device from 'svelte-system-info'
+</script>
 
+<script>
   console.log('BrowserName',    System.BrowserName)
   console.log('BrowserVersion', System.BrowserVersion)
   console.log('OSName',         System.OSName)
@@ -43,7 +47,7 @@ Alternatively, you may access the global variable `System` directly.
 </script>
 ```
 
-## Usage as a CommonJS or AMD Module (or as a global Variable) ##
+## Usage as an ECMAscript, a CommonJS or AMD Module (or as a global Variable) ##
 
 Let's assume that you already "required" or "imported" (or simply loaded) the module according to your local environment. In that case, you may use it as follows:
 
