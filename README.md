@@ -24,7 +24,7 @@ or load the plain script file directly
 
 How to access the package depends on the type of module you prefer
 
-* ESM: `import System from 'svelte-system-info'`
+* ESM (or Svelte): `import System from 'svelte-system-info'`
 * CommonJS: `const System = require('svelte-system-info')`
 * AMD: `require(['svelte-system-info'], (System) => {...})`
 
