@@ -208,6 +208,7 @@
             VersionMatch = UserAgent.match(/Win(?:dows)?(?: Phone)?[\ _]?(?:(?:NT|9x) )?((?:(\d+\.)*\d+)|XP|ME|CE)\b/)
             if (VersionMatch && VersionMatch[1]) {
               switch (VersionMatch[1]) {
+                case '10.0':
                 case '6.4':  DeviceOSVersion = '10.0';        break
                 case '6.3':  DeviceOSVersion = '8.1';         break
                 case '6.2':  DeviceOSVersion = '8';           break
@@ -229,7 +230,7 @@
           VersionMatch = UserAgent.match(/OS ((\d+[._])+\d+) like Mac OS\ X/)
           break
         case 'Android':
-          VersionMatch = UserAgent.match(/(?:Android|Adr) ((\d+[._])+\d+)/)
+          VersionMatch = UserAgent.match(/(?:Android|Adr) ((\d+)[._]?\d*)/)
           break
         case 'ChromeOS':
           VersionMatch = UserAgent.match(/(?:CrOS) [^ ]+ ((\d+[._])+\d+)/)
