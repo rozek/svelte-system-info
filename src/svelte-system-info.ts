@@ -181,7 +181,7 @@
       DeviceOSName = 'BlackBerryOS'
     }
 
-    if (UserAgent.contains('Linux')) {
+    if (UserAgent.contains('Linux') && UserAgent.lacks('Android')) {
       DeviceOSName = 'Linux'
     }
 
