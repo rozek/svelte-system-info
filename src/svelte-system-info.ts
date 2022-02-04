@@ -150,12 +150,17 @@
       DeviceOSName = 'macOS'
     }
 
+    if (UserAgent.contains('Linux') && UserAgent.lacks('Android')) {
+      DeviceOSName = 'Linux'
+    }
+
     if (UserAgent.contains('like Mac OS X') && UserAgent.contains('iPhone')) {
       DeviceOSName = 'iOS'
     }
 
     if (UserAgent.contains('like Mac OS X') && UserAgent.contains('iPad')) {
-      DeviceOSName = 'iPad'
+      let VersionMatch = UserAgent.match(/OS ((\d+[._])+\d+) like Mac OS\ X/)
+      DeviceOSName = (parseInt(VersionMatch[1] || '',10) >= 13 ? 'iPadOS' : 'iOS')
     }
 
     if (
@@ -179,10 +184,6 @@
 
     if (UserAgent.contains('BlackBerry')) {
       DeviceOSName = 'BlackBerryOS'
-    }
-
-    if (UserAgent.contains('Linux') && UserAgent.lacks('Android')) {
-      DeviceOSName = 'Linux'
     }
 
   /**** DeviceOSVersion ****/
@@ -226,11 +227,11 @@
           VersionMatch = UserAgent.match(/OS X ((\d+[._])+\d+)\b/)
           break
         case 'iOS':
-        case 'iPad':
+        case 'iPadOS':
           VersionMatch = UserAgent.match(/OS ((\d+[._])+\d+) like Mac OS\ X/)
           break
         case 'Android':
-          VersionMatch = UserAgent.match(/(?:Android|Adr) ((\d+)[._]?\d*)/)
+          VersionMatch = UserAgent.match(/(?:Android|Adr) ((\d+([._]\d+)*)/)
           break
         case 'ChromeOS':
           VersionMatch = UserAgent.match(/(?:CrOS) [^ ]+ ((\d+[._])+\d+)/)
