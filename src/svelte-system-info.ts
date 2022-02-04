@@ -231,7 +231,7 @@
           VersionMatch = UserAgent.match(/OS ((\d+[._])+\d+) like Mac OS\ X/)
           break
         case 'Android':
-          VersionMatch = UserAgent.match(/(?:Android|Adr) ((\d+([._]\d+)*)/)
+          VersionMatch = UserAgent.match(/(?:Android|Adr) (\d+([._]\d+)*)/)
           break
         case 'ChromeOS':
           VersionMatch = UserAgent.match(/(?:CrOS) [^ ]+ ((\d+[._])+\d+)/)
