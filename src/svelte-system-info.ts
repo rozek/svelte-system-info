@@ -150,8 +150,12 @@
       DeviceOSName = 'macOS'
     }
 
-    if (UserAgent.contains('like Mac OS X')) {
+    if (UserAgent.contains('like Mac OS X') && UserAgent.contains('iPhone')) {
       DeviceOSName = 'iOS'
+    }
+
+    if (UserAgent.contains('like Mac OS X') && UserAgent.contains('iPad')) {
+      DeviceOSName = 'iPad'
     }
 
     if (
@@ -177,6 +181,10 @@
       DeviceOSName = 'BlackBerryOS'
     }
 
+    if (UserAgent.contains('Linux') && UserAgent.lacks('Android')) {
+      DeviceOSName = 'Linux'
+    }
+
   /**** DeviceOSVersion ****/
   // based on: https://github.com/keithws/browser-report
 
@@ -200,6 +208,7 @@
             VersionMatch = UserAgent.match(/Win(?:dows)?(?: Phone)?[\ _]?(?:(?:NT|9x) )?((?:(\d+\.)*\d+)|XP|ME|CE)\b/)
             if (VersionMatch && VersionMatch[1]) {
               switch (VersionMatch[1]) {
+                case '10.0':
                 case '6.4':  DeviceOSVersion = '10.0';        break
                 case '6.3':  DeviceOSVersion = '8.1';         break
                 case '6.2':  DeviceOSVersion = '8';           break
@@ -217,10 +226,11 @@
           VersionMatch = UserAgent.match(/OS X ((\d+[._])+\d+)\b/)
           break
         case 'iOS':
+        case 'iPad':
           VersionMatch = UserAgent.match(/OS ((\d+[._])+\d+) like Mac OS\ X/)
           break
         case 'Android':
-          VersionMatch = UserAgent.match(/(?:Android|Adr) ((\d+[._])+\d+)/)
+          VersionMatch = UserAgent.match(/(?:Android|Adr) ((\d+)[._]?\d*)/)
           break
         case 'ChromeOS':
           VersionMatch = UserAgent.match(/(?:CrOS) [^ ]+ ((\d+[._])+\d+)/)
