@@ -150,8 +150,12 @@
       DeviceOSName = 'macOS'
     }
 
-    if (UserAgent.contains('like Mac OS X')) {
+    if (UserAgent.contains('like Mac OS X') && UserAgent.contains('iPhone')) {
       DeviceOSName = 'iOS'
+    }
+
+    if (UserAgent.contains('like Mac OS X') && UserAgent.contains('iPad')) {
+      DeviceOSName = 'iPad'
     }
 
     if (
@@ -175,6 +179,10 @@
 
     if (UserAgent.contains('BlackBerry')) {
       DeviceOSName = 'BlackBerryOS'
+    }
+
+    if (UserAgent.contains('Linux')) {
+      DeviceOSName = 'Linux'
     }
 
   /**** DeviceOSVersion ****/
@@ -217,6 +225,7 @@
           VersionMatch = UserAgent.match(/OS X ((\d+[._])+\d+)\b/)
           break
         case 'iOS':
+        case 'iPad':
           VersionMatch = UserAgent.match(/OS ((\d+[._])+\d+) like Mac OS\ X/)
           break
         case 'Android':
