@@ -18,7 +18,7 @@ npm install svelte-system-info
 
 or load the plain script file directly
 
-```
+```html
 <script src="https://unpkg.com/svelte-system-info"></script>
 ```
 
@@ -36,7 +36,7 @@ Alternatively, you may access the global variable `System` directly.
 
 For Svelte, it is recommended to import the package in a module context:
 
-```
+```html
 <script context="module">
   import Device from 'svelte-system-info'
 </script>
@@ -53,7 +53,7 @@ For Svelte, it is recommended to import the package in a module context:
 
 Let's assume that you already "required" or "imported" (or simply loaded) the module according to your local environment. In that case, you may use it as follows:
 
-```
+```javascript
 console.log('BrowserName',    System.BrowserName)
 console.log('BrowserVersion', System.BrowserVersion)
 console.log('OSName',         System.OSName)
