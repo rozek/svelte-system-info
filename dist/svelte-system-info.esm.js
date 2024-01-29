@@ -235,5 +235,5 @@ var svelteSystemInfo = {
     get OSVersion() { return DeviceOSVersion; },
 };
 
-export default svelteSystemInfo;
+export { svelteSystemInfo as default };
 //# sourceMappingURL=svelte-system-info.esm.js.map
