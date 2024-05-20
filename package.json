@@ -6,15 +6,16 @@
   "main": "./dist/svelte-system-info.js",
   "module": "./dist/svelte-system-info.esm.js",
   "svelte": "./dist/svelte-system-info.esm.js",
+  "types": "./dist/svelte-system-info.d.ts",
   "exports": {
     ".": {
       "require": "./dist/svelte-system-info.js",
       "import": "./dist/svelte-system-info.esm.js",
-      "svelte": "./dist/svelte-system-info.esm.js"
+      "svelte": "./dist/svelte-system-info.esm.js",
+      "types": "./dist/svelte-system-info.d.ts"
     },
     "./package.json": "./package.json"
   },
-  "types": "./dist/svelte-system-info.d.ts",
   "scripts": {
     "build": "rimraf dist && rollup -c rollup.config.js && tsc && mv src/*.d.ts dist && rm src/*.js* && rm -rf dist/src",
     "agadoo": "agadoo",
