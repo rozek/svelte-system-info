@@ -38,7 +38,7 @@ For Svelte, it is recommended to import the package in a module context:
 
 ```html
 <script context="module">
-  import Device from 'svelte-system-info'
+  import System from 'svelte-system-info'
 </script>
 
 <script>
